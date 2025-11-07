@@ -7,7 +7,7 @@
 
 {this is a link to the video that goes over the project in a little detail}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/1RzsbHlgCM4)
 
 # Development Environment
 

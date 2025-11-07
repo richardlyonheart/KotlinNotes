@@ -10,11 +10,11 @@ import androidx.navigation.NavController
 import com.example.kotlinnotes.data.Note
 import com.example.kotlinnotes.viewmodel.NoteViewModel
 import androidx.compose.runtime.livedata.observeAsState
-
+//composable screen to display list of notes
 @Composable
 fun NoteListScreen(viewModel: NoteViewModel, navController: NavController) {
     val notes: List<Note> by viewModel.notes.observeAsState(initial = emptyList())
-
+// Scaffold with floating action button to add new note
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(onClick = { navController.navigate("detail") }) {
@@ -23,6 +23,7 @@ fun NoteListScreen(viewModel: NoteViewModel, navController: NavController) {
         }
     ) { padding ->
         LazyColumn(contentPadding = padding) {
+            // Display each note using NoteItem composable
             items(notes) { note: Note ->
                 NoteItem(
                     note = note,

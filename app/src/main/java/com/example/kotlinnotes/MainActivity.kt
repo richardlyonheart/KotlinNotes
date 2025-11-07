@@ -12,7 +12,7 @@ import com.example.kotlinnotes.ui.NoteListScreen
 import com.example.kotlinnotes.ui.NoteDetailScreen
 import com.example.kotlinnotes.ui.theme.KotlinNotesTheme
 import com.example.kotlinnotes.viewmodel.NoteViewModel
-
+// MainActivity sets up the Compose content and navigation
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
+// Composable function to set up navigation between screens
 @Composable
 fun AppNavigation(viewModel: NoteViewModel) {
     val navController = rememberNavController()
